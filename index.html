@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <span class="logo"><i class="fa-solid fa-locust"></i></span>
+        <nav class="nav">
+            <ul class="list">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#blog">Blogs</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+            <img src="https://swindledpodcast.com/wp-content/themes/swindled/assets/img/subsribe-btn-graph.svg" class="contactImg" alt="zigzag"/>
+            <button class="contact">Contact Me</button>
+        </nav>
+
+        <!-- hover effect element -->
+        <div class="hoverDiv">
+            <ul>
+                <li><a href="#about"><i class="fa-brands fa-linkedin"></i><span>Linkedin</span></a></li>
+                <li><a href="#blog"><i class="fa-brands fa-github"></i><span>Github</span></a></li>
+                <li><a href="#work"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
+                <li><a href="#resume"><i class="fa-brands fa-hashnode"></i><span>Hashnode</span></a></li>
+                <li><a href="#resume"><i class="fa-brands fa-spotify"></i><span>Spotify</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <Section>
+        <div class="marquee"><p class="marqueePl">L White-collar LIES criminals Con artists Corporate EVI</p></div>
+        <div class="marquee"><p class="marqueePr">L White-collar LIES criminals Con artists Corporate EVI</p></div>
+    </Section>
+
+    <script>
+    const button = document.querySelector('.contact');
+    const transitionElement = document.querySelector('.hoverDiv');
+    const contact = document.querySelector('.contact');
+    const contactImg = document.querySelector('.contactImg');
+
+    button.addEventListener('mouseover', function() {
+      transitionElement.classList.add('transitioned');
+      contact.classList.add('transitioned')
+      contactImg.classList.add('transitioned')
+    });
+
+    transitionElement.addEventListener('mouseleave', function() {
+        transitionElement.classList.remove('transitioned');
+        contact.classList.remove('transitioned')
+        contactImg.classList.remove('transitioned')
+    });
+    </script>
+</body>
+</html>
