@@ -1,0 +1,62 @@
+.project{
+    padding: 0;
+    margin:  0;
+    height: 100vh;
+    /* overflow: auto; */
+}
+.first-project{
+    width: 100vw;
+    border-top: 1px solid black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.first-project:hover .first-project-text .hidden-img{
+    transform: rotate(0deg);
+    bottom: -16px;
+    overflow: visible;
+}
+.first-project::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+    z-index: 0;
+}
+.first-project:hover::after{
+    width: 100%;
+}
+.first-project-text{
+    padding: 0.5rem 2rem;
+    flex: 1;
+    position: relative;
+    color: black;
+    transition: all 0.5s ease-in-out;
+    z-index: 14;
+}
+.first-project-text:hover{
+    color: white;
+}
+
+.hidden-img{
+    position: absolute;
+    right: 70px;
+    line-height: 0.67;
+    aspect-ratio: 1/1;
+    transition: all 0.75s linear;
+    transform-origin: top left;
+    bottom: -330px;
+    transform: rotate(7deg);
+    transform-origin: top left;
+}
+.hidden-img img{
+    height: 200px;
+    width: auto;
+}

@@ -10,7 +10,7 @@
 html,body{
     background-color: #E83A33;
     color: black;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* header section */
@@ -19,6 +19,7 @@ html,body{
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    margin-top: -0.5rem;
 }
 .logo{
     font-size: 1.5rem;
@@ -35,6 +36,7 @@ html,body{
     gap: 2rem;
     list-style-type: none;
     text-decoration: none;
+    z-index: 9;
 }
 .list > li > a{
     text-decoration: none;
@@ -109,6 +111,10 @@ html,body{
 .hoverDiv>ul>li>a>span:hover{
     transform: translateX(1rem);
 }
+/* landing page  */
+.landing-page{
+    height: 100vh;
+}
 
 /* marquee */
 .marquee{
@@ -178,3 +184,50 @@ html,body{
     width: 100%;
 }
     
+/* landing middle img things */
+.landing-window{
+    width: 80vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+.gif0,.gif1,.gif2,.gif3{
+    position: absolute;
+    height: 100px;
+    width: auto;
+}
+.gif0{
+    top: 49px;
+    left: 10rem;
+}
+.gif1{
+    right: -20px;
+    top: 6rem;
+}
+.gif2{
+    bottom: 1rem;
+    left: -49px;
+}
+.gif3{
+    bottom: 3rem;
+    right: 13rem;
+}
+
+/* img hover style */
+.img0{
+    position: absolute;
+    top: 49px;
+    left: 10rem;
+    height: 100px;
+    width: 178px;
+    object-fit: cover;
+}  
+  .gif0 {
+    display: none;
+  }
+  
