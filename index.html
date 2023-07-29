@@ -7,7 +7,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/project.css">
 </head>
 <body>
     <header class="header">
@@ -34,10 +35,44 @@
             </ul>
         </div>
     </header>
-    <Section>
+    <Section class="landing-page">
         <div class="marquee"><p class="marqueePl">L White-collar LIES criminals Con artists Corporate EVI</p></div>
         <div class="marquee"><p class="marqueePr">L White-collar LIES criminals Con artists Corporate EVI</p></div>
+        <div class="landing-window">
+            <div class="gif-container">
+                <img src="./assets/biggieSmalls.jpeg" alt="img" class="img0"/>
+                <img src="https://media.giphy.com/media/129rZZ3a4anp0Q/giphy.gif" alt="gif" class="gif0 gifjs"/>
+            </div>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/129rZZ3a4anp0Q/giphy.gif" alt="gif" class="gif1 gifjs"/>
+            </div>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/129rZZ3a4anp0Q/giphy.gif" alt="gif" class="gif2 gifjs"/>
+            </div>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/129rZZ3a4anp0Q/giphy.gif" alt="gif" class="gif3 gifjs"/>
+            </div>
+        </div>
     </Section>
+
+    <section class="projects">
+        <div class="first-project one">
+            <div class="first-project-text">NotePad ultimate pro max</div>
+        </div>
+        <div class="first-project two">
+            <div class="first-project-text">NotePad ultimate pro max</div>
+        </div>
+        <div class="first-project three">
+            <div class="first-project-text">NotePad ultimate pro max
+                <div class="hidden-img">
+                    <img src="./assets/biggieSmalls.jpeg" alt="biggiesmalls" /> 
+                </div>
+            </div>
+        </div>
+        <div class="first-project four">
+            <div class="first-project-text">NotePad ultimate pro max</div>
+        </div>
+    </section>
 
     <script>
     const button = document.querySelector('.contact');
@@ -55,6 +90,20 @@
         transitionElement.classList.remove('transitioned');
         contact.classList.remove('transitioned')
         contactImg.classList.remove('transitioned')
+    });
+
+    // gif hover effect 
+    const container = document.querySelector('.gif-container'); 
+    const staticGif = document.querySelector('.img0');
+    const hoverGif = document.querySelector('.gif0');
+
+    container.addEventListener('mouseenter', () => {
+        staticGif.style.display = 'none';
+        hoverGif.style.display = 'block';
+    });
+    container.addEventListener('mouseleave', () => {
+        staticGif.style.display = 'block';
+        hoverGif.style.display = 'none';
     });
     </script>
 </body>
